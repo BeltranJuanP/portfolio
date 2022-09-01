@@ -1,3 +1,64 @@
 * {
-    color : crimson
+    color:rgb(48, 43, 44);
+    font-family: roboto, sans-serif;
+    box-sizing: border-box;
 }
+
+body {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    color:rgb(42, 97, 205);
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 2%
+}
+
+#landing {
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2%
+}
+
+h1 {
+    margin: 0;
+    color:rgb(28, 68, 148);
+}
+
+p {
+    width: 80%;
+}
+
+#taskbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.links {
+    transition: background-color 300ms;
+    width: min-content
+}
+
+.links:hover {
+    background-color: rgb(188, 192, 200);
+}
+
+form {
+    padding: 2%;
+}
+
