@@ -397,7 +397,6 @@ nav,
 }
 
 .modal_img_container {
-    padding-left: 40px;
     padding-bottom: 40px;
 }
 
@@ -653,7 +652,7 @@ footer {
         transform: none;
         height: auto;
         width: 100%;
-        flex-direction: column-reverse;
+        flex-direction: column;
         border-radius: 0;
     }
 
