@@ -10,6 +10,7 @@ TODO:
     - maybe do a different modal for that case because yeah its just weird
       - could make modal_about section the whole screen add mail button and hide the contact one
   - descriptions on projects don't really work
+    - can be solved by changing everything from hover to click
   - lines under the links dont disapear once you touch them -- FIXED
 
 # library website
