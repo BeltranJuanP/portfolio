@@ -4,156 +4,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Juan Beltran</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("Fo5ZBuxcghS-WwStg");
+    })();
+    </script>
 </head>
 <body>
-    <section id="about-me">
+    <section id="landing_page">
         <nav>
-            <div class="personal_logo">Juan Beltran</div>
-            <ul class="nav_list">
-                <li class="nav_link">
-                    <a href="#languages" class="
-                        nav_link_a
+            <ul class="nav_link_list">
+                <li class="nav_link" onclick="toggleModal()">
+                    <a href="#" class="
+                        nav_link_anchor
                         link_hover_effect
                         link_hover_effect_black
-                    ">Languages</a>
+                    ">About</a>
                 </li>
                 <li class="nav_link">
                     <a href="#projects" class="
-                        nav_link_a
+                        nav_link_anchor
                         link_hover_effect
                         link_hover_effect_black
                     ">Projects</a>
                 </li>
-                <li class="nav_link">
-                    <a href="mailto:juanbeltran2994@gmail.com" class="
-                        nav_link_a_primary
-                        nav_link_primary
+                <li class="nav_link" onclick="toggleModal()">
+                    <a href="#" class="
+                        nav_link_anchor
+                        link_hover_effect
+                        link_hover_effect_black
                     ">Contact</a>
+                </li>
+                <li class="nav_link click" onclick="toggleContrast()">
+                    <a href="#" class="
+                        nav_link_anchor
+                        link_hover_effect
+                        link_hover_effect_black
+                    "><i class="fas fa-adjust"></i></a>
                 </li>
             </ul>
         </nav>
-        <div class="flex flex_1">
-            <div class="about_me_info row">
-                <div class="about_me_info_container">
-                    <figure class="my_picture_mask">
-                        <img src="./images/me.jpeg" alt="picture of me" class="my_picture">
-                    </figure>
-                    <h1 class="about_me_info_title">
-                        Hey I'm <span class="text_purple">Juan Beltran</span>&nbsp;<span class="wave">👋</span>
-                    </h1>
-                    <p class="about_me_info_para">
-                        I'm a <strong class="text_purple">software engineer</strong> with a strong passion
-                        for building responsive and performant web applications with great user experiences
-                        that positively impact the world.
-                    </p>
-                    <div class="about_me_links">
-                        <a href="https://www.linkedin.com/in/beltranjuanp/" class="about_me_link" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/BeltranJuanP" class="about_me_link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:juanbeltran2994@gmail.com" class="about_me_link" target="_blank">
-                            <i class="far fa-envelope"></i>
-                        </a>
-                        <a href="./images/resume.pdf" class="about_me_link" target="_blank">
-                            <i class="fas fa-file-pdf"></i>
-                        </a>
-                    </div>
+        <header class="header">
+            <div class="header_content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title orange">I'm Juan.</h1>
+                <p class="header_para">
+                    I'm a <b class="orange">Software Engineer</b> with a strong passion
+                    for building applications with great user experiences.
+                    <br>
+                    Here's a bit more <b class="orange about_me" onclick="toggleModal()">about me.</b>
+                </p>
+                <div class="social_list">
+                    <a href="" class="social_link click">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="" class="social_link click">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="" class="social_link click">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
                 </div>
-                <figure class="about_me_img_container">
-                    <img src="./images/undraw_websites.svg" alt="image" class="about_me_img">
-                </figure>
+            </div>
+        </header>
+        <a href="#">
+            <button class="mail_btn click" onclick="toggleModal()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
+        <a href="#projects" class="scroll">
+            <div class="scroll_icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal_half modal_about">
+                <h3 class="modal_title black">Here's a bit about me.</h3>
+                <h4 class="modal_sub black">Software Engineer</h4>
+                <p class="modal_para black">
+                    I'm a <b class="orange">software engineer</b> and a 2022 graduate from the University of Washington, with a great passion
+                    for building products which postively impact people.
+                    <br>
+                    I have experience building full stack applications, from design to implementation.
+                </p>
+                <div class="social_list">
+                    <a href="" class="social_link click">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="" class="social_link click">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="" class="social_link click">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="modal_half modal_contact">
+                <h3 class="modal_title white">Let's have a chat!</h3>
+                <h4 class="modal_sub white">I'm currently open to new opportunities.</h4>
+                <form id="contact_form" onsubmit="contact(event)">
+                    <div class="form_item">
+                        <label class="form_label">Name</label>
+                        <input type="text" name="user_name" class="input">
+                    </div>
+                    <div class="form_item">
+                        <label class="form_label">Email</label>
+                        <input type="email" name="user_email" class="input">
+                    </div>
+                    <div class="form_item">
+                        <label class="form_label">Message</label>
+                        <textarea type="text" name="message" class="input"></textarea>
+                    </div>
+                    <button id="contact_submit" class="form_submit">Send it my way</button>
+                </form>
+                <div class="modal_overlay modal_overlay_loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal_overlay modal_overlay_success">
+                    Thanks!
+                </div>
+                <i class="fas fa-times modal_exit click" onclick="toggleModal()"></i>
             </div>
         </div>
     </section>
-    <section id="languages">
+    <section class="projects" id="projects">
         <div class="container">
             <div class="row">
-                <h1 class="section_title">This is my <span class="text_purple">technology stack</span></h1>
-                <div class="language_list">
-                    <div class="language">
-                        <figure class="language_img_container">
-                        <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
-                            alt="Html Logo" class="language_img" />
-                        </figure>
-                        <span class="language_name">HTML</span>
-                    </div>
-                    <div class="language">
-                        <figure class="language_img_container">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS Logo"
-                            class="language_img" />
-                        </figure>
-                        <span class="language_name">CSS</span>
-                    </div>
-                    <div class="language">
-                        <figure class="language_img_container">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="JavaScript Logo"
-                            class="language_img" />
-                        </figure>
-                        <span class="language_name">JavaScript</span>
-                    </div>
-                    <div class="language">
-                        <figure class="language_img_container">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png"
-                            alt="TypeScript Logo" class="language_img" />
-                        </figure>
-                        <span class="language_name">TypeScript</span>
-                    </div>
-                    <div class="language">
-                        <figure class="language_img_container">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png" alt="Vue Logo"
-                            class="language_img" />
-                        </figure>
-                        <span class="language_name">Vue</span>
-                    </div>
-                    <div class="language">
-                        <figure class="language_img_container">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/nuxt-dot-js-3628959-3030184.png" alt="Nuxt Logo"
-                            class="language_img" />
-                        </figure>
-                        <span class="language_name">Nuxt</span>
-                    </div>
-                    <div class="language">
-                        <figure class="language_img_container">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React Logo"
-                            class="language_img" />
-                        </figure>
-                        <span class="language_name">React</span>
-                    </div>
-                    <div class="language">
-                        <figure class="language_img_container">
-                        <img src="https://mobx.js.org/img/mobx.png" alt="MobX Logo" class="language_img" />
-                        </figure>
-                        <span class="language_name">MobX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="projects">
-        <div class="container">
-            <div class="row">
-                <h1 class="section_title">Here are some of my <span class="text_purple">projects</span></h1>
+                <h1 class="section_title">
+                    Here are some of my <span class="orange">projects.</span>
+                </h1>
                 <ul class="project_list">
                     <li class="project">
-                        <div class="project_container">
-                            <img src="./images/loopit.png" alt="project image" class="project_img">
+                        <div class="project_wrapper">
+                            <img src="./assets/blinker mockup.png" alt="" class="project_img">
+                            <div class="project_background"></div>
                             <div class="project_description">
-                                <h3 class="project_description_title">Car sales project</h3>
-                                <h4 class="project_description_sub">HTML, CSS, Javascript, Vue, Vuex</h4>
+                                <h3 class="project_description_title">
+                                    Placeholder
+                                </h3>
+                                <h4 class="project_description_sub">
+                                    Html, CSS, JavaScript
+                                </h4>
                                 <p class="project_description_para">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus facere repellendus doloribus consequatur molestiae similique repudiandae impedit animi sed vero, veritatis facilis nesciunt error harum quidem. Nulla, voluptatibus doloremque.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas iste natus temporibus laboriosam molestias praesentium repellat veniam asperiores, excepturi expedita, iusto aliquid magni autem quo cumque ut inventore omnis?
                                 </p>
                                 <div class="project_description_links">
-                                    <a href="" class="project_description_link" target="_blank">
+                                    <a href="#" class="project_description_link">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="" class="project_description_link" target="_blank">
+                                    <a href="#" class="project_description_link">
                                         <i class="fas fa-link"></i>
                                     </a>
                                 </div>
@@ -161,19 +165,24 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project_container">
-                            <img src="./images/chat.png" alt="project image" class="project_img">
+                        <div class="project_wrapper">
+                            <img src="./assets/blinker mockup.png" alt="" class="project_img">
+                            <div class="project_background"></div>
                             <div class="project_description">
-                                <h3 class="project_description_title">Chat App</h3>
-                                <h4 class="project_description_sub">HTML, CSS, Javascript, Vue, Vuex</h4>
+                                <h3 class="project_description_title">
+                                    Placeholder
+                                </h3>
+                                <h4 class="project_description_sub">
+                                    Html, CSS, JavaScript
+                                </h4>
                                 <p class="project_description_para">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus facere repellendus doloribus consequatur molestiae similique repudiandae impedit animi sed vero, veritatis facilis nesciunt error harum quidem. Nulla, voluptatibus doloremque.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas iste natus temporibus laboriosam molestias praesentium repellat veniam asperiores, excepturi expedita, iusto aliquid magni autem quo cumque ut inventore omnis?
                                 </p>
                                 <div class="project_description_links">
-                                    <a href="" class="project_description_link" target="_blank">
+                                    <a href="#" class="project_description_link">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="" class="project_description_link" target="_blank">
+                                    <a href="#" class="project_description_link">
                                         <i class="fas fa-link"></i>
                                     </a>
                                 </div>
@@ -181,19 +190,24 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project_container">
-                            <img src="./images/dashboard.png" alt="project image" class="project_img">
+                        <div class="project_wrapper">
+                            <img src="./assets/blinker mockup.png" alt="" class="project_img">
+                            <div class="project_background"></div>
                             <div class="project_description">
-                                <h3 class="project_description_title">Sales POS</h3>
-                                <h4 class="project_description_sub">HTML, CSS, Javascript, Vue, Vuex</h4>
+                                <h3 class="project_description_title">
+                                    Placeholder
+                                </h3>
+                                <h4 class="project_description_sub">
+                                    Html, CSS, JavaScript
+                                </h4>
                                 <p class="project_description_para">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus facere repellendus doloribus consequatur molestiae similique repudiandae impedit animi sed vero, veritatis facilis nesciunt error harum quidem. Nulla, voluptatibus doloremque.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas iste natus temporibus laboriosam molestias praesentium repellat veniam asperiores, excepturi expedita, iusto aliquid magni autem quo cumque ut inventore omnis?
                                 </p>
                                 <div class="project_description_links">
-                                    <a href="" class="project_description_link" target="_blank">
+                                    <a href="#" class="project_description_link">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="" class="project_description_link" target="_blank">
+                                    <a href="#" class="project_description_link">
                                         <i class="fas fa-link"></i>
                                     </a>
                                 </div>
@@ -205,30 +219,29 @@
         </div>
     </section>
     <footer>
-        <div class="row footer_row">
-            <div class="footer_list">
-                <a href="https://www.linkedin.com/in/beltranjuanp/" class="
-                    footer_link
-                    link_hover_effect
-                    link_hover_effect_white
-                " target="_blank">LinkedIn</a>
-                <a href="https://github.com/BeltranJuanP" class="
-                    footer_link
-                    link_hover_effect
-                    link_hover_effect_white
-                " target="_blank">Github</a>
-                <a href="mailto:juanbeltran@gmail.com" class="
-                    footer_link
-                    link_hover_effect
-                    link_hover_effect_white
-                " target="_blank">Email</a>
-                <a href="./images/resume.pdf" class="
-                    footer_link
-                    link_hover_effect
-                    link_hover_effect_white
-                " target="_blank">Resume</a>
+        <div class="container">
+            <div class="row footer_row">
+                <div class="footer_social_list">
+                    <a href="#" class="
+                        footer_social_link
+                        link_hover_effect
+                        link_hover_effect_white
+                    ">Github</a>
+                    <a href="#" class="
+                        footer_social_link
+                        link_hover_effect
+                        link_hover_effect_white
+                    ">LinkedIn</a>
+                    <a href="#" class="
+                        footer_social_link
+                        link_hover_effect
+                        link_hover_effect_white
+                    ">Resume</a>
+                </div>
+                <div class="footer_copy">
+                    Juan Beltran
+                </div>
             </div>
-            <div class="footer_copy">Copyright © 2022 Juan Beltran</div>
         </div>
     </footer>
 </body>
