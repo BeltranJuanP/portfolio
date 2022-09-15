@@ -664,6 +664,11 @@ footer {
     .modal_half {
         width: 100%;
     }
+
+    .link_hover_effect:hover:after {
+        left: 0;
+        width: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -700,5 +705,10 @@ footer {
 
     .mail_btn {
         visibility: hidden;
+    }
+
+    .link_hover_effect:hover:after {
+        left: 0;
+        width: 0;
     }
 }
