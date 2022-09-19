@@ -115,6 +115,7 @@ li {
     text-align: center;
     border: none;
     color: #7342d6;
+    display: none;
 }
 
 .menu_backdrop {
@@ -402,6 +403,72 @@ footer {
 
 .footer_link {
     padding: 0 8px;
+}
+
+/* 
+**
+
+BOOKS PAGE
+
+**
+*/
+
+#books_body {
+    background-color: rgba(115, 66, 214, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+#books_main {
+    flex: 1;
+}
+
+.books_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.books_header_title {
+    margin-bottom: 0;
+}
+
+select {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 16px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.books_loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 60px;
+    color: #7342d6;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+0% {
+    transform: rotate(0);
+}
+
+100% {
+    transform: rotate(360deg);
+}
 }
 
 @media (max-width: 768px) {
