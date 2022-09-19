@@ -1,6 +1,6 @@
 # portfolio
 
-This is my portofolio
+This is my work in progres portofolio
 
 TODO: 
 - fix my description
