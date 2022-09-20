@@ -14,11 +14,15 @@ TODO:
   - lines under the links dont disapear once you touch them -- FIXED
 
 # library website
+Random library/book shop website to practice building commerce webpages
+https://beltranjuanp.github.io/portfolio/commerce/
+
 - make node.js server to fetch books instead of having them hardcoded
   - add loading state
 
 # treact website
-Replica of a website template to practice css styling.
+Replica of a website template to practice css styling. (hasn't been updated)
+https://beltranjuanp.github.io/portfolio/treact/
 
 TODO: 
 - add responsive ui
@@ -27,9 +31,11 @@ TODO:
 - fix the circle backgrounds in the values section
 - make the faqs section work
 - make the review accordion work as well
+- pictures don't work anymore
 
 # dictionary website
 This website is just to practice using api.
+https://beltranjuanp.github.io/portfolio/dictionary/
 
 # fifa database
 Work in progress of fifa database using REST API
