@@ -28,6 +28,9 @@ TODO:
 - make the faqs section work
 - make the review accordion work as well
 
+# dictionary website
+This website is just to practice using api.
+
 
 
 
