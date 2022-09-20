@@ -457,6 +457,11 @@ select {
     color: #7342d6;
 }
 
+.book_price_gen {
+    display: flex;
+    align-items: center;
+}
+
 .fa-spinner {
     animation: rotate 600ms infinite linear;
 }

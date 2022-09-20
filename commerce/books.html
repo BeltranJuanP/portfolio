@@ -49,27 +49,18 @@
     <section>
       <div class="container">
         <div class="row">
-          <h2 class="section_title books_header_title">
-            All <span class="purple">Books</span>
-          </h2>
-          <div class="book">
-            <figure class="book_img_wrapper">
-              <img class="book_img" src="assets/atomic habits.jpg" alt="">
-            </figure>
-            <div class="book_title">
-              Atomic Habits
-            </div>
-            <div class="book_ratings">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="book_price">
-              <span class="book_price_normal">$59.95</span> $14.95
-            </div>
+          <div class="books_header">
+            <h2 class="section_title books_header_title">
+              All <span class="purple">Books</span>
+            </h2>
+            <select id="filter" onchange="filterBooks(event)">
+              <option value="" disabled selected>Sort</option>
+              <option value="LOW_TO_HIGH">Low to High</option>
+              <option value="HIGH_TO_LOW">High to Low</option>
+              <option value="RATING">Rating</option>
+            </select>
           </div>
+          <div class="books"></div>
         </div>
       </div>
     </section>
