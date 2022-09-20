@@ -12,13 +12,19 @@
     <div class="container">
         <div class="row">
             <div class="search_section">
-                <h1>Dictionary</h1>
-                <p>The world's largest dictionary at your fingertips.</p>
-                <form onsubmit="searchWord(event)">
-                    <input type="search" name="" id="search_text">
-                    <button type="submit">Search!</button>
-                </form>
+                <div class="search_section_content">
+                    <h1 class="title">Dictionary</h1>
+                    <p class="sub">The world's largest dictionary at your fingertips.</p>
+                    <form onsubmit="searchWord(event)">
+                        <input type="search" name="" id="search_text">
+                        <button type="submit" id="search_submit">Search!</button>
+                    </form>
+                </div>
             </div>
+        </div>
+    </div>
+    <div class="container content">
+        <div class="row">
             <div id="search_result">
                 <!-- <h2 class="word">word</h2>
                 <div class="word_types">

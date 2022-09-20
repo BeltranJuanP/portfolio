@@ -35,6 +35,7 @@ function renderWordData(word, data) {
     const wordTypes = document.createElement("div")
     wordTypes.className = "word_types"
 
+    let partOfSpeechSeen = new Set()
     for (let i = 0; i < data.length; i++) {
         const wordTypeSection = document.createElement("div")
         wordTypeSection.className = "word_type_section"
@@ -44,6 +45,12 @@ function renderWordData(word, data) {
         const wordType = document.createElement("h3")
         wordType.className = "word_type"
         wordType.textContent = dataSection.partOfSpeech
+
+        if (partOfSpeechSeen.has(dataSection.partOfSpeech)) {
+            continue;
+        }
+
+        partOfSpeechSeen.add(dataSection.partOfSpeech)
     
         wordTypeSection.appendChild(wordType)
 
@@ -62,7 +69,7 @@ function renderWordData(word, data) {
         wordTypeSection.appendChild(meanings)
         wordTypes.appendChild(wordTypeSection)
     }
-
+    console.log(partOfSpeechSeen)
     searchResultElement.appendChild(wordTypes)
 }
 
