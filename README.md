@@ -14,7 +14,8 @@ TODO:
   - lines under the links dont disapear once you touch them -- FIXED
 
 # library website
-- make it work
+- make node.js server to fetch books instead of having them hardcoded
+  - add loading state
 
 # treact website
 Replica of a website template to practice css styling.
