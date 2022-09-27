@@ -34,7 +34,7 @@ TODO:
 
 # dictionary website
 This website is just to practice using api.
-https://beltranjuanp.github.io/portfolio/dictionary/
+https://github.com/BeltranJuanP/dictionary
 
 # fifa database
 Work in progress of fifa database using REST API
