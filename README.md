@@ -15,10 +15,9 @@ TODO:
 
 # library website
 Random library/book shop website to practice building commerce webpages
-https://beltranjuanp.github.io/portfolio/commerce/
+https://juan-beltran-library.herokuapp.com
 
 - make node.js server to fetch books instead of having them hardcoded
-  - add loading state
 
 # treact website
 Replica of a website template to practice css styling. (hasn't been updated)
