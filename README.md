@@ -15,10 +15,9 @@ TODO:
 
 # library website
 Random library/book shop website to practice building commerce webpages
-https://beltranjuanp.github.io/portfolio/commerce/
+https://juan-beltran-library.herokuapp.com
 
 - make node.js server to fetch books instead of having them hardcoded
-  - add loading state
 
 # treact website
 Replica of a website template to practice css styling. (hasn't been updated)
@@ -35,7 +34,7 @@ TODO:
 
 # dictionary website
 This website is just to practice using api.
-https://beltranjuanp.github.io/portfolio/dictionary/
+https://github.com/BeltranJuanP/dictionary
 
 # fifa database
 Work in progress of fifa database using REST API
